@@ -1,26 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Recipes</h1>
+<div class="mx-auto" style="width: 9em;">
+    <h1>Recipes</h1>
+</div>
 
-  <tbody>
     <% @recipes.each do |recipe| %>
-      <div class="card text-center">
+      <div class="card text-center mx-auto" style="width: 60rem;">
         <div class="card-header">
           <%= recipe.user.name %>
         </div>
         <div class="card-body">
           <h4 class="card-title"><%= recipe.name %></h4>
-          <p class="card-text"><%= recipe.method %></p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text"><%= recipe.description %></p>
+          <p class="btn btn-success"><%= link_to 'Full recipe', recipe, {:style=>'color:#FFFFFF;', :class => "css_class"}%> </p>
         </div>
         <div class="card-footer text-muted">
           2 days ago
         </div>
       </div>
     <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Recipe', new_recipe_path %>
+<style>
+#btn-new-recipe {
+  position: relative;
+  left: 46%;
+}
+</style>
+
+<div class="btn btn-primary" id="btn-new-recipe" >
+ <a href="/recipes/new" style="color: white;" style="width: 9em;">New Recipe</a>
+</div>
