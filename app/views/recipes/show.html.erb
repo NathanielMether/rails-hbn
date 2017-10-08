@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Rating:</strong>
+  <%= @recipe.rating %>
+</p>
+
+<p>
   <strong>Recipe Name:</strong>
   <%= @recipe.name %>
 </p>
@@ -18,6 +23,11 @@
 <p>
   <strong>Method:</strong>
   <%= @recipe.method %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @recipe.comment %>
 </p>
 
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171007231824) do
+ActiveRecord::Schema.define(version: 20171007235746) do
 
   create_table "ratings", force: :cascade do |t|
     t.integer "value"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20171007231824) do
     t.string "name"
     t.text "ingredients"
     t.text "description"
+    t.string "rating"
+    t.text "comment"
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 

@@ -1,7 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+<style>
+#btn-new-recipe {
+  position: relative;
+  left: 46%;
+
+#global-friend {
+  position: relative;
+  left: 46%%;
+}
+}
+</style>
+
 <div class="mx-auto" style="width: 9em;">
     <h1>Recipes</h1>
+</div>
+
+<div class="btn-group" id="global-friend" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    Global
+  </label>
+  <label class="btn btn-secondary">
+    Friends
 </div>
 
     <% @recipes.each do |recipe| %>
@@ -12,22 +32,18 @@
         <div class="card-body">
           <h4 class="card-title"><%= recipe.name %></h4>
           <p class="card-text"><%= recipe.description %></p>
+          <p class="card-text">Rating: <%= recipe.rating %></p>
           <p class="btn btn-success"><%= link_to 'Full recipe', recipe, {:style=>'color:#FFFFFF;', :class => "css_class"}%> </p>
         </div>
         <div class="card-footer text-muted">
           2 days ago
         </div>
+        <p class="card-text">Comments: <%= recipe.comment %></p>
       </div>
     <% end %>
 
 <br>
 
-<style>
-#btn-new-recipe {
-  position: relative;
-  left: 46%;
-}
-</style>
 
 <div class="btn btn-primary" id="btn-new-recipe" >
  <a href="/recipes/new" style="color: white;" style="width: 9em;">New Recipe</a>

@@ -36,6 +36,16 @@
     <%= form.text_area :method, id: :recipe_method %>
   </div>
 
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.text_area :rating, id: :recipe_rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment, id: :recipe_comment %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
